@@ -4,6 +4,8 @@ import java.util.List;
 import java.util.function.Function;
 import java.util.function.UnaryOperator;
 
+import builtInFunctionalInterface.User;
+
 public class UnaryOperatorDemo {
 
   public static void main(String[] args) {

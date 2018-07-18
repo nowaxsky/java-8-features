@@ -4,6 +4,8 @@ import java.util.List;
 import java.util.function.Function;
 import java.util.function.ToDoubleFunction;
 
+import builtInFunctionalInterface.User;
+
 public class ToDoubleFunctionDemo {
 
   public static void main(String[] args) {

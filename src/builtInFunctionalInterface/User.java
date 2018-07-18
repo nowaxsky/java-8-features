@@ -57,4 +57,26 @@ public class User {
 		return users;
 	}
 	
+	public static User[] createArray() {
+		List<User> users = createList();
+		return users.toArray(new User[users.size()]);
+	}
+	
+	// similar to Comparator method
+	public static int compareName(User a, User b) {
+		return a.getName().compareTo(b.getName());
+	}
+	// similar to Comparator method
+	public int compareAge(User a, User b) {
+		return new Integer(a.getAge()).compareTo(b.getAge());
+	}
+
+	// similar to Comparable method
+	public int compareNameTo(User a) {
+		return this.getName().compareTo(a.getName());
+	}
+	// similar to Comparable method
+	public int compareAgeTo(User a) {
+		return new Integer(this.getAge()).compareTo(a.getAge());
+	}
 }
