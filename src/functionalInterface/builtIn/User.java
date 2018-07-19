@@ -57,7 +57,7 @@ public class User {
 	
 	public static List<User> createList() {
 		List<User> users = new ArrayList<>();
-		users.add(new User("A01", "Bob", 19, Gender.M));
+		users.add(new User("A01", "Bob", 18, Gender.M));
 		users.add(new User("A02", "Jane", 22, Gender.F));
 		users.add(new User("B01", "Bob", 25, Gender.M));
 		users.add(new User("B02", "Annie", 31, Gender.F));

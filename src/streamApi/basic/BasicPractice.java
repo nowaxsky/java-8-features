@@ -4,9 +4,7 @@ import java.util.List;
 import java.util.function.Consumer;
 import java.util.function.Function;
 import java.util.function.Predicate;
-import java.util.function.Supplier;
 import java.util.stream.Collectors;
-import functionalInterface.basic.Analyzer;
 import functionalInterface.builtIn.User;
 
 public class BasicPractice {
@@ -16,6 +14,7 @@ public class BasicPractice {
     // for (User u : User.createList()) {
     // printUsers.accept(u);
     // }
+    User.createList().stream().forEach(printUsers);
   }
 
   public static void functionPractice() {
@@ -23,6 +22,7 @@ public class BasicPractice {
     // for (User u : User.createList()) {
     // System.out.println(getName.apply(u));
     // }
+    User.createList().stream().map(getName).forEach(System.out::println);
   }
 
   public static void predicatePractice() {
@@ -31,11 +31,12 @@ public class BasicPractice {
     // if (adult.test(u))
     // System.out.println(u);
     // }
+    User.createList().stream().filter(adult).forEach(System.out::println);
   }
 
   public static void supplierPractice() {
     List<User> users = User.createList();
-    List<String> ids = null;
+    List<String> ids = users.stream().map(User::getName).collect(Collectors.toList());
     ids.stream().forEach(i -> System.out.println(i));
   }
 

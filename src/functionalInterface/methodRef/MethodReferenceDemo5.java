@@ -1,5 +1,6 @@
 package functionalInterface.methodRef;
 
+import java.util.Arrays;
 import java.util.function.Supplier;
 import functionalInterface.builtIn.User;
 
@@ -24,11 +25,11 @@ public class MethodReferenceDemo5 {
     User[] users = User.createArray();
 
     // Arrays.sort(users, (a, b) -> User.compareName(a, b));
-    // TODO
+    Arrays.sort(users, User::compareName);
     show(users);
 
     // Arrays.sort(users, (a, b) -> UserComparator.compareId(a, b));
-    // TODO
+    Arrays.sort(users, UserComparator::compareId);
     show(users);
   }
 
@@ -39,13 +40,13 @@ public class MethodReferenceDemo5 {
     User u = new User();
 
     // Arrays.sort(users, (a, b) -> u.compareAge(a, b));
-    // TODO
+    Arrays.sort(users, u::compareAge);
     show(users);
 
     UserComparator uc = new UserComparator();
 
     // Arrays.sort(users, (a, b) -> uc.compareName(a, b));
-    // TODO
+    Arrays.sort(users, uc::compareName);
     show(users);
   }
 
@@ -54,11 +55,11 @@ public class MethodReferenceDemo5 {
     User[] users = User.createArray();
 
     // Arrays.sort(users, (a, b) -> a.compareNameTo(b));
-    // TODO
+    Arrays.sort(users, User::compareNameTo);
     show(users);
 
     // Arrays.sort(users, (a, b) -> a.compareAgeTo(b));
-    // TODO
+    Arrays.sort(users, User::compareAgeTo);
     show(users);
 
   }
@@ -66,8 +67,8 @@ public class MethodReferenceDemo5 {
   // Reference to constructor
   public static void test4() {
 
-    Supplier<MethodReferenceDemo5> supplier = () -> new MethodReferenceDemo5();
-    // TODO
+    // Supplier<MethodReferenceDemo5> supplier = () -> new MethodReferenceDemo5();
+    Supplier<MethodReferenceDemo5> supplier = MethodReferenceDemo5::new;
     System.out.println(supplier.get().getClass());
   }
 }

@@ -3,7 +3,6 @@ package functionalInterface.advanced;
 import java.util.List;
 import java.util.function.BiPredicate;
 import java.util.function.Predicate;
-
 import functionalInterface.builtIn.User;
 
 public class BiPredicateDemo {
@@ -15,16 +14,13 @@ public class BiPredicateDemo {
 
     String testName = "john";
 
-    // TODO: Is the first John or not?
-    // Predicate<User> predicate = null;
-    //
-    // System.out.println("Is the first John? " + predicate.test(first));
+    // Is the first John or not?
+    Predicate<User> predicate = u -> u.getName().equalsIgnoreCase(testName);
+    System.out.println("Is the first John? " + predicate.test(first));
 
-    
-    
     // BiPredicate
-    // BiPredicate<User, String> nameBiPred = (u, s) -> u.getName().equalsIgnoreCase(s);
-    // System.out.println("Is the first John? " + nameBiPred.test(first, testName));
+    BiPredicate<User, String> nameBiPred = (u, s) -> u.getName().equalsIgnoreCase(s);
+    System.out.println("Is the first John? " + nameBiPred.test(first, testName));
 
   }
 }

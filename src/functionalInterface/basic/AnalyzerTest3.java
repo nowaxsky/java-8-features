@@ -18,10 +18,10 @@ public class AnalyzerTest3 {
     });
 
     // remove bracket
-
+    test(strArr, "b", (String target, String keyStr) -> target.contains(keyStr));
 
     // use simple character
-
+    test(strArr, "b", (t, k) -> t.contains(k));
 
   }
 
