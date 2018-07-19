@@ -1,4 +1,4 @@
-package methodRef;
+package functionalInterface.methodRef;
 
 /**
  * Static method

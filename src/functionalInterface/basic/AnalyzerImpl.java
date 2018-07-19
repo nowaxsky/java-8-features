@@ -1,4 +1,4 @@
-package functionalInterface;
+package functionalInterface.basic;
 
 public class AnalyzerImpl implements Analyzer {
 

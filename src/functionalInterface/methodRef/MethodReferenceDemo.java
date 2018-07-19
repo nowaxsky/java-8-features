@@ -1,20 +1,18 @@
-package methodRef;
+package functionalInterface.methodRef;
 
 import java.util.Arrays;
 
 /**
- * Normal method
+ * Static method
  * @author CPM
  *
  */
-public class MethodReferenceDemo2 {
+public class MethodReferenceDemo {
 
 	public static void main(String[] args) {
 		String[] arr = {"a", "b", "z", "d", "e"};
-		UtilB u = new UtilB();
-		
-//		Arrays.sort(arr, (a,b) -> u.compare(a, b));
-		Arrays.sort(arr, u::compare);
+//		Arrays.sort(arr, (a,b) -> UtilA.compareIgnoreCase(a, b));
+		Arrays.sort(arr, UtilA::compareIgnoreCase);
 		
 		for(String s: arr) {
 			System.out.println(s);

@@ -1,10 +1,10 @@
-package advancedFunctionalInterface;
+package functionalInterface.advanced;
 
 import java.util.List;
 import java.util.function.BiPredicate;
 import java.util.function.Predicate;
 
-import builtInFunctionalInterface.User;
+import functionalInterface.builtIn.User;
 
 public class BiPredicateDemo {
 

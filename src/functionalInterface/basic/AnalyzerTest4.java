@@ -1,6 +1,6 @@
-package functionalInterface;
+package functionalInterface.basic;
 
-public class AnalyzerTest {
+public class AnalyzerTest4 {
 
   static void test(String[] strArr, String keyStr, Analyzer analyzer) {
     for (String str : strArr) {
@@ -12,7 +12,9 @@ public class AnalyzerTest {
   public static void main(String[] args) {
     String[] strArr = {"abc", "bcd", "efg"};
 
-    test(strArr, "b", new AnalyzerImpl());
+    test(strArr, "b", (t, s) -> t.contains(s));
+    test(strArr, "b", (t, s) -> t.startsWith(s));
+    test(strArr, "b", (t, s) -> t.endsWith(s));
   }
 
 }

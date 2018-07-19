@@ -1,10 +1,10 @@
-package advancedFunctionalInterface;
+package functionalInterface.advanced;
 
 import java.util.List;
 import java.util.function.Function;
 import java.util.function.UnaryOperator;
 
-import builtInFunctionalInterface.User;
+import functionalInterface.builtIn.User;
 
 public class UnaryOperatorDemo {
 

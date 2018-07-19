@@ -1,4 +1,4 @@
-package builtInFunctionalInterface;
+package functionalInterface.builtIn;
 
 import java.util.function.Supplier;
 

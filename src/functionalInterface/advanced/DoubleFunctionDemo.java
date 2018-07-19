@@ -1,4 +1,4 @@
-package advancedFunctionalInterface;
+package functionalInterface.advanced;
 
 import java.util.function.DoubleFunction;
 import java.util.function.Function;

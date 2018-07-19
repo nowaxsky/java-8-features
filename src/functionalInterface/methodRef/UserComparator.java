@@ -1,6 +1,6 @@
-package methodRef;
+package functionalInterface.methodRef;
 
-import builtInFunctionalInterface.User;
+import functionalInterface.builtIn.User;
 
 public class UserComparator {
 

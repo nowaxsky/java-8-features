@@ -1,9 +1,9 @@
-package methodRef;
+package functionalInterface.methodRef;
 
 import java.util.Arrays;
 import java.util.function.Supplier;
 
-import builtInFunctionalInterface.User;
+import functionalInterface.builtIn.User;
 
 public class MethodReferenceDemo5 {
 
