@@ -59,7 +59,7 @@ public class User {
 		List<User> users = new ArrayList<>();
 		users.add(new User("A01", "Bob", 19, Gender.M));
 		users.add(new User("A02", "Jane", 22, Gender.F));
-		users.add(new User("B01", "John", 25, Gender.M));
+		users.add(new User("B01", "Bob", 25, Gender.M));
 		users.add(new User("B02", "Annie", 31, Gender.F));
 		users.add(new User("B03", "Betty", 13, Gender.F));
 		return users;

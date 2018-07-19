@@ -8,3 +8,5 @@ https://lw900925.github.io/java/java8-newtime-api.html
 http://blog.tonycube.com/2015/10/java-java8-4-optional.html
 
 http://blog.tonycube.com/2015/10/java-java8-3-stream.html
+
+http://eherrera.net/ocpj8-notes/04-lambda-built-in-functional-interfaces
