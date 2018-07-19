@@ -6,7 +6,7 @@ public class SupplierType {
 
   public static void main(String[] args) {
     
-    Supplier<User> user = () -> new User("B04", "Eason", 28);
+    Supplier<User> user = () -> new User("B04", "Eason", 28, Gender.M);
     System.out.println(user.get());
   }
 

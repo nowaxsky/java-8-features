@@ -8,6 +8,7 @@ public class User {
 	private String id;
 	private String name;
 	private int age;
+	private Gender gender;
 	public String getId() {
 		return id;
 	}
@@ -26,21 +27,28 @@ public class User {
 	public void setAge(int age) {
 		this.age = age;
 	}
+	public Gender getGender() {
+		return gender;
+	}
+	public void setGender(Gender gender) {
+		this.gender = gender;
+	}
 	
 	public User() {
 		super();
 	}
 	
-	public User(String id, String name, int age) {
+	public User(String id, String name, int age, Gender gender) {
 		super();
 		this.id = id;
 		this.name = name;
 		this.age = age;
+		this.gender = gender;
 	}
 	
 	@Override
 	public String toString() {
-		return "ID=" + id + ", Name=" + name + ", Age=" + age;
+		return "ID=" + id + ", Name=" + name + ", Age=" + age + ", Gender=" + gender;
 	}
 	
 	public void printUser() {
@@ -49,11 +57,11 @@ public class User {
 	
 	public static List<User> createList() {
 		List<User> users = new ArrayList<>();
-		users.add(new User("A01", "Bob", 18));
-		users.add(new User("A02", "Jane", 22));
-		users.add(new User("B01", "John", 25));
-		users.add(new User("B02", "Phil", 65));
-		users.add(new User("B03", "Betty", 13));
+		users.add(new User("A01", "Bob", 19, Gender.M));
+		users.add(new User("A02", "Jane", 22, Gender.F));
+		users.add(new User("B01", "John", 25, Gender.M));
+		users.add(new User("B02", "Annie", 31, Gender.F));
+		users.add(new User("B03", "Betty", 13, Gender.F));
 		return users;
 	}
 	
