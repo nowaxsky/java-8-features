@@ -33,12 +33,24 @@ public class StreamExceptionWrapper {
   // practice
   public static <T, E extends Exception> Predicate<T> handlingPredicateWrapper(
       ThrowingPredicate<T, E> throwingPredicate, Class<E> exceptionClass) {
-    return null;
+    return i -> {
+      try {
+        return throwingPredicate.test(i);
+      } catch (Exception e) {
+        throw new RuntimeException();
+      }
+    };
   }
 
   // practice
   public static <T, E extends Exception> Supplier<T> handlingSupplierWrapper(
       ThrowingSupplier<T, E> throwingSupplier, Class<E> exceptionClass) {
-    return null;
+    return () -> {
+      try {
+        return throwingSupplier.get();
+      } catch (Exception e) {
+        throw new RuntimeException();
+      }
+    };
   }
 }
